@@ -1,0 +1,184 @@
+kubrick (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:33:30 +0900
+
+kubrick (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Borrow minimal upstream signing key from k3b.
+  * Removed Eshat Cakar, George Kiagiadakis, Maximiliano Curia, Modestas
+    Vainius from the uploaders, thanks for your work on the package!
+  * Added myself to the uploaders.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 28 Apr 2021 10:49:02 +0900
+
+kubrick (4:20.12.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Re-export upstream signing key without extra signatures.
+  * Remove obsolete field Name from debian/upstream/metadata (already present in
+    machine-readable debian/copyright).
+  * Bump Standards-Version to 4.5.1, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 08 Jan 2021 10:10:24 +0100
+
+kubrick (4:20.04.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Switch from dhmk to the dh sequencer:
+    - invoke the dh sequencer using the kf5 addon
+    - call the right debhelper command instead of $(overridden_command)
+    - manually force the generation of the substvars for the kde-l10n breaks
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper build dependency to debhelper-compat 13
+    - remove debian/compat
+  * Add Rules-Requires-Root: no.
+  * Bump Standards-Version to 4.5.0, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 03 Aug 2020 08:54:37 +0200
+
+kubrick (4:19.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update watch file to the new release-service location.
+  * Add the configuration for the CI on salsa.
+  * Update the build dependencies according to the upstream build system:
+    - bump cmake to 3.5
+    - explicitly add gettext
+  * Switch cmake parameter BIN_INSTALL_DIR to KDE_INSTALL_BINDIR, as the former
+    is deprecated.
+  * Drop the man page, as it is obsolete, and not useful.
+  * Bump Standards-Version to 4.4.1, no changes required.
+  * Remove empty line at the end of changelog.
+  * Small copyright update.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 06 Jan 2020 21:07:26 +0100
+
+kubrick (4:18.04.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * New upstream release (18.04.1).
+  * Update Vcs links to salsa.
+  * Use secure copyright format uri.
+  * Bump Standards-Version to 4.1.4 (No changes needed).
+  * Bump debhelper build-dep and compat to 11.
+  * Update build-deps and deps with the info from cmake
+  * Update copyright file for new upstream.
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 29 May 2018 02:31:20 +0200
+
+kubrick (4:17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * New upstream release (17.08.1)
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Add breaks/replaces against the kde-l10n packages
+  * Update uploaders list as requested by MIA team (Closes: #879404)
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
+  * Bump Standards-Version to 4.1.1, no changes required.
+  * Simplify watch file, and switch it to https.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 18 Nov 2017 18:26:08 +0100
+
+kubrick (4:17.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 Sep 2017 14:03:48 +0000
+
+kubrick (4:17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 23 Aug 2017 10:47:45 +0000
+
+kubrick (4:16.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Stop forcing the local installation to debian/tmp, letting the package
+    directory as install place.
+    - remove kubrick.install, no more used now
+  * Do not ship TODO as documentation, since it is useless for users.
+  * Switch the khelpcenter4 recommend to khelpcenter.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 24 Aug 2016 06:14:35 +0200
+
+kubrick (4:4.12.2-3) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Update watch file
+  * Remove menu file and friends
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Update vcs uris to the applications one
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 May 2016 23:42:33 +0200
+
+kubrick (4:4.12.2-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:25:12 +0200
+
+kubrick (4:4.12.2-1) experimental; urgency=medium
+
+  * Do not disable an empty test set.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:32:23 +0100
+
+kubrick (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 07 Nov 2013 14:29:01 +0100
+
+kubrick (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 07 Oct 2013 15:30:23 +0200
+
+kubrick (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 16:23:12 +0200
+
+kubrick (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update vcs fields.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 10:55:34 +0200
+
+kubrick (4:4.10.2-1) experimental; urgency=low
+
+  * First release of kdegames after being split by upstream.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Apr 2013 10:17:48 +0200

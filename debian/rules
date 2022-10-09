@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+l10npkgs_firstversion_ok := 4:16.04.3-2~
+include /usr/share/pkg-kde-tools/qt-kde-team/2/l10n-packages.mk
+
+%:
+	dh $@ --with kf5
+
+override_dh_auto_configure:
+	dh_auto_configure -Skf5 -- -DKDE_INSTALL_BINDIR=/usr/games
+
+override_dh_gencontrol: l10npkgs_firstversion_ok
+	dh_gencontrol

@@ -1,0 +1,50 @@
+Source: kubrick
+Section: games
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Daniel Schepler <schepler@debian.org>,
+           Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+           Sune Vuorela <sune@debian.org>,
+Build-Depends: cmake (>= 3.5~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.68.0~),
+               gettext,
+               libgl1-mesa-dev,
+               libglu1-mesa-dev,
+               libkf5config-dev (>= 5.68.0~),
+               libkf5configwidgets-dev (>= 5.68.0~),
+               libkf5coreaddons-dev (>= 5.68.0~),
+               libkf5crash-dev (>= 5.68.0~),
+               libkf5doctools-dev (>= 5.68.0~),
+               libkf5i18n-dev (>= 5.68.0~),
+               libkf5kdegames-dev (>= 4.9.0~),
+               libkf5kio-dev (>= 5.68.0~),
+               libkf5widgetsaddons-dev (>= 5.68.0~),
+               libkf5xmlgui-dev (>= 5.68.0~),
+               libqt5opengl5-dev (>= 5.12.0~),
+               libqt5svg5-dev (>= 5.12.0~),
+               pkg-kde-tools (>= 0.14),
+               qtbase5-dev (>= 5.12.0~),
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://games.kde.org/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kubrick
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kubrick.git
+
+Package: kubrick
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
+Recommends: khelpcenter
+Description: game based on Rubik's Cube
+ Kubrick is a game based on Rubik's Cube and using OpenGL 3-D graphics
+ libraries.
+ .
+ Kubrick handles cubes, "bricks" and "mats" from 2x2x1 up to 6x6x6. It has
+ several built-in puzzles of graded difficulty, as well as demos of solving
+ moves and pretty patterns. The game has unlimited undo, redo, save and
+ reload capabilities.
+ .
+ This package is part of the KDE games module.
